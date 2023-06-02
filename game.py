@@ -29,6 +29,6 @@ while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
         scores[0] += x // 3
         scores[1] += y // 3
         scores[2] += z // 3
-    print(f"p1-{x}:{scores[0]}\n")
-    print(f"p2-{y}:{scores[1]}\n")
-    print(f"p3-{z}:{scores[2]}\n")
+    print(f"p1:{x}:{scores[0]}\n")
+    print(f"p2:{y}:{scores[1]}\n")
+    print(f"p3:{z}:{scores[2]}\n")
