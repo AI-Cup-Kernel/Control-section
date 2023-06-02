@@ -9,7 +9,7 @@ while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
         y = 0
     if(z > 8 or z < 1):
         z = 0
-    if(x != y and x != z):   #if all three were different
+    if(x != y and y != z):   #if all three were different
         scores[0] += 2 * x
         scores[1] += 2 * y
         scores[2] += 2 * z
