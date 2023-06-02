@@ -1,8 +1,8 @@
 scores = [0, 0, 0]   #all scores in a row
 while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
-    x = int(input())  #score player1
-    y = int(input())   #score player2
-    z = int(input())   #score player3
+    x = int(input())  #player1 choice
+    y = int(input())   #player2 choice
+    z = int(input())   #player3 choice
     if(x > 8 or x < 1):   #invalid input
         x = 0
     if(y > 8 or y < 1):
@@ -15,7 +15,7 @@ while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
         scores[2] += 2 * z
     elif (x == y and y != z): #if just x and y were the same
         scores[0] += x // 2
-        scores[1] += y 
+        scores[1] += y //2
         scores[2] += 2 * z
     elif (x == z and z != y):  #if just x and z were the same
         scores[0] += x // 2
