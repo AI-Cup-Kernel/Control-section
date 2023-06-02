@@ -13,23 +13,22 @@ while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
         scores[0] += 2 * x
         scores[1] += 2 * y
         scores[2] += 2 * z
-    else:
-        if(x == y and y != z):   #if just x and y were the same
-            scores[0] += int(x / 2)
-            scores[1] += int(y / 2)
-            scores[2] += 2 * z
-        else:
-            if(x == z and z != y):  #if just x and z were the same
-                scores[0] += int(x / 2)
-                scores[2] += int(z / 2)
-                scores[1] += 2 * y
-            else:
-                if(y == z and z != x):  #if just y and z were the same
-                    scores[1] += int(y / 2) 
-                    scores[2] += int(z / 2)
-                    scores[0] += 2 * x 
-                else:    #if all of them were the same
-                    scores[0] += int(x / 3)
-                    scores[1] += int(y / 3)
-                    scores[2] += int(z / 3)
-    print(f"p1-{x}:{scores[0]}\np2-{y}:{scores[1]}\np3-{z}:{scores[2]}")
+    elif (x == y and y != z): #if just x and y were the same
+        scores[0] += x // 2
+        scores[1] += y 
+        scores[2] += 2 * z
+    elif (x == z and z != y):  #if just x and z were the same
+        scores[0] += x // 2
+        scores[2] += z // 2
+        scores[1] += 2 * y
+    elif (y == z and z != x):   #if just y and z were the same
+        scores[1] += y // 2 
+        scores[2] += z // 2
+        scores[0] += 2 * x 
+    else:    #if all of them were the same
+        scores[0] += x // 3
+        scores[1] += y // 3
+        scores[2] += z // 3
+    print(f"p1-{x}:{scores[0]}\n")
+    print(f"p2-{y}:{scores[1]}\n")
+    print(f"p3-{z}:{scores[2]}\n")
