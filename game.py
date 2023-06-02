@@ -15,16 +15,16 @@ while(scores[0] < 101 and scores[1] < 101 and scores[2] < 101):
         scores[2] += 2 * z
     elif (x == y and y != z): #if just x and y were the same
         scores[0] += x // 2
-        scores[1] += y //2
+        scores[1] += y // 2
         scores[2] += 2 * z
     elif (x == z and z != y):  #if just x and z were the same
         scores[0] += x // 2
-        scores[2] += z // 2
         scores[1] += 2 * y
+        scores[2] += z // 2
     elif (y == z and z != x):   #if just y and z were the same
+        scores[0] += 2 * x 
         scores[1] += y // 2 
         scores[2] += z // 2
-        scores[0] += 2 * x 
     else:    #if all of them were the same
         scores[0] += x // 3
         scores[1] += y // 3
